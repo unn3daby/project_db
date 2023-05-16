@@ -1,0 +1,15 @@
+.mycard {
+    position: relative;
+    &__like {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    img {
+       object-fit: cover; 
+    }
+    button {
+        height: 100%;
+    }
+}

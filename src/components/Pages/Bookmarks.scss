@@ -1,0 +1,40 @@
+.bookmarks {
+    padding-top: 20px;
+    min-height: 900px;
+    background-color: #F9F8F8;
+    background-image: url('../../img/veg.png');
+    &__wrapper {
+        margin: 0 auto;
+        max-width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &__title {
+        margin: 0 auto;
+        text-align: center;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    .mycard {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .loader {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+    }
+    &__notfound {
+        font-size: 30px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

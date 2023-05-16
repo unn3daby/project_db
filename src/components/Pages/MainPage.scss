@@ -1,0 +1,55 @@
+.main-page {
+    height: 100%;
+    max-height: 500px;
+    background-image: url('../../img/veg.png');
+    background-color: #F9F8F8;
+    .woman {
+        display: block;
+        margin: 0 auto;
+        width: 500px;
+        height: auto;
+    }
+    &__subtitle {
+        font-weight: normal;
+    }
+}
+.about {
+    padding: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__text {
+        background: #FFFFFF;
+        border-radius: 30px;
+        max-width: 730px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        padding: 85px;
+        color: #525C60;
+        span {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 29px;
+            color: #274C5B;
+
+        }
+        h3 {
+            text-align: center;
+            margin-top: 0;
+            font-family: 'Roboto' sans-serif;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 50px;
+            line-height: 59px;
+
+            color: #274C5B;
+        }
+    }
+    &__descr {
+        margin-top: 20px;
+    }
+}

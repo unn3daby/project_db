@@ -1,0 +1,189 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "title": "Помидоры",
+      "descr": "Бакинские розовые помидоры отличаются небольшим размером, имеют тонкую кожицу и мясистую, сочную, сладкую мякоть. Выращены в экологически чистом районе...",
+      "img": "https://avatars.mds.yandex.net/get-marketpic/934847/pic8e8dd498c8425e3b1d255e65b3974cbf/orig",
+      "shops": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Помидоры",
+      "descr": "Lorem ipsum kiskisdkosdki sdkofkisfk km;skmaskmsdasd",
+      "img": "https://avatars.mds.yandex.net/get-marketpic/934847/pic8e8dd498c8425e3b1d255e65b3974cbf/orig",
+      "shops": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Помидоры",
+      "descr": "Lorem ipsum kiskisdkosdki sdkofkisfk km;skmaskmsdasd",
+      "img": "https://avatars.mds.yandex.net/get-marketpic/934847/pic8e8dd498c8425e3b1d255e65b3974cbf/orig",
+      "shops": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Помидоры",
+      "descr": "Lorem ipsum kiskisdkosdki sdkofkisfk km;skmaskmsdasd",
+      "img": "https://avatars.mds.yandex.net/get-marketpic/934847/pic8e8dd498c8425e3b1d255e65b3974cbf/orig",
+      "shops": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Помидоры",
+      "descr": "Lorem ipsum kiskisdkosdki sdkofkisfk km;skmaskmsdasd",
+      "img": "https://avatars.mds.yandex.net/get-marketpic/934847/pic8e8dd498c8425e3b1d255e65b3974cbf/orig",
+      "shops": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Помидоры",
+      "descr": "Lorem ipsum kiskisdkosdki sdkofkisfk km;skmaskmsdasd",
+      "img": "https://avatars.mds.yandex.net/get-marketpic/934847/pic8e8dd498c8425e3b1d255e65b3974cbf/orig",
+      "shops": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Помидоры",
+      "descr": "Lorem ipsum kiskisdkosdki sdkofkisfk km;skmaskmsdasd",
+      "img": "https://avatars.mds.yandex.net/get-marketpic/934847/pic8e8dd498c8425e3b1d255e65b3974cbf/orig",
+      "shops": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Помидоры",
+      "descr": "Lorem ipsum kiskisdkosdki sdkofkisfk km;skmaskmsdasd",
+      "img": "https://avatars.mds.yandex.net/get-marketpic/934847/pic8e8dd498c8425e3b1d255e65b3974cbf/orig",
+      "shops": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Помидоры",
+      "descr": "Lorem ipsum kiskisdkosdki sdkofkisfk km;skmaskmsdasd",
+      "img": "https://avatars.mds.yandex.net/get-marketpic/934847/pic8e8dd498c8425e3b1d255e65b3974cbf/orig",
+      "shops": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Помидоры",
+      "descr": "Lorem ipsum kiskisdkosdki sdkofkisfk km;skmaskmsdasd",
+      "img": "https://avatars.mds.yandex.net/get-marketpic/934847/pic8e8dd498c8425e3b1d255e65b3974cbf/orig",
+      "shops": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Помидоры",
+      "descr": "Lorem ipsum kiskisdkosdki sdkofkisfk km;skmaskmsdasd",
+      "img": "https://avatars.mds.yandex.net/get-marketpic/934847/pic8e8dd498c8425e3b1d255e65b3974cbf/orig",
+      "shops": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 12,
+      "title": "sDADAS",
+      "descr": "Lorem ipsum kiskisdkosdki sdkofkisfk km;skmaskmsdasd",
+      "img": "https://avatars.mds.yandex.net/get-marketpic/934847/pic8e8dd498c8425e3b1d255e65b3974cbf/orig",
+      "shops": [
+        1,
+        2
+      ]
+    }
+  ],
+  "shops": [
+    {
+      "id": 1,
+      "name": "Дикси",
+      "img": "https://yt3.googleusercontent.com/ytc/AMLnZu-heSyYk2WXAFKBdzfLvWSwZNYw0Tl_b48MMVJq=s900-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": 2,
+      "name": "Пятерочка",
+      "img": "https://free-png.ru/wp-content/uploads/2021/07/free-png.ru-57.png"
+    },
+    {
+      "id": 3,
+      "name": "Перекресток",
+      "img": "https://75.img.avito.st/image/1/buzpdra_wgWf2FANuXd3vWPVxA9XFc2XVdXAA1HTwAVdkw"
+    },
+    {
+      "id": 4,
+      "name": "Магнит",
+      "img": "https://sun6-23.userapi.com/s/v1/ig2/ap8dQqa_lDd_HaKJ9TSUD-upCYTA8yCD59_IHP3zv1Afu8aeAs17iKs8EUqfkMeUMlY1W0Rdxm1OM3H8kVGwjg4Q.jpg?size=1196x1196&quality=96&crop=0,0,1196,1196&ava=1"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "login": "admin",
+      "password": "123",
+      "isAdmin": false
+    }
+  ],
+  "bookmarks": [
+    {
+      "id": "62fa2236c27",
+      "userId": 1,
+      "cardId": 5
+    },
+    {
+      "id": "236c27035b5",
+      "userId": 1,
+      "cardId": 2
+    }
+  ],
+  "price": [
+    {
+      "id": 1,
+      "shopId": 1,
+      "productId": 8,
+      "date": "15.05.2023",
+      "price": "70"
+    },
+    {
+      "id": 2,
+      "shopId": 2,
+      "productId": 8,
+      "date": "15.05.2023",
+      "price": "85"
+    },
+    {
+      "id": 3,
+      "shopId": 3,
+      "productId": 8,
+      "date": "15.05.2023",
+      "price": "90"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+.product {
+    padding: 50px 30px;
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+    &__descr {
+        max-width: 600px;
+    }
+    &__title {
+        h2{
+            margin: 0
+        }
+        font-size: 40px;
+    }
+    &__shops {
+        &__title {
+            font-size: 30px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.mybutton {
+    min-width: 220px;
+    padding: 10px;
+    height: 79px;
+    border: none;
+    background: #fdc400;
+    border-radius: 16px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    a {
+        text-decoration: none;
+        color: #2e312d;
+    }
+    &:hover {
+        transition: 0.3s;
+        background: #d3a203;
+    }
+}

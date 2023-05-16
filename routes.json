@@ -1,0 +1,3 @@
+{
+    "/users/:userId/bookmarks": "/users/:userId/bookmarks"
+}

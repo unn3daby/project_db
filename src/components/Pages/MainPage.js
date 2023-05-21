@@ -5,7 +5,6 @@ import veg from '../../img/vegetables.svg'
 import './MainPage.scss';
 import { Link } from 'react-router-dom';
 import Button from '../../features/Button/Button';
-import axios from 'axios';
 
 const MainPage = () => {
     return (
@@ -42,7 +41,7 @@ const MainPage = () => {
 
                     <Box className= 'about__descr'>
                         <span>Зачем?<br></br></span>
-                        Мы убеждены, что наш сервис сэкономит ваше время и деньги, позволяя вам быстро найти лучшие предложения. Независимо от того, что вы ищете - продукты питания, электронику, одежду или другие товары - мы поможем вам найти самую выгодную цену.
+                        Мы убеждены, что наш сервис сэкономит ваше время и деньги, позволяя вам быстро найти лучшие предложения. Независимо от того, что вы ищете - фрукты, овощи, конфеты, напитики и так далее - мы поможем вам найти самую выгодную цену.
                     </Box>
 
                     <Box className= 'about__descr'>

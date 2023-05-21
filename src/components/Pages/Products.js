@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MyCard from '../Card/MyCard';
 import './Products.scss';
 import { useGetCardsQuery, useGetUserBookmarksQuery } from '../../api/apiSlice';
 import Loader from '../../features/Loader/Loader';
 import { Box } from '@mui/material';
 import { useSelector } from 'react-redux';
+import SearchBar from '../SearchBar/SearchBar';
 
 const Products = () => {
     const {user} = useSelector(state => state.auth);
     const {data, isLoading} = useGetCardsQuery();
-    const filteredData = data
+    const [filter, setFilter] = useState('');
+    let filteredData = data;
+    if (!isLoading) {
+        filteredData = data.filter(item => item.name.indexOf(filter) >= 0)
+    }
+    console.log(data);
 
     return (
         <main className='products'>
@@ -19,12 +25,13 @@ const Products = () => {
                 :
                 <>
                     <h2 className='products__title'>Найдите нужный вам товар!</h2>
+                        <SearchBar placeholder={'Введите название товара'} value = {filter} setValue={setFilter}/>
                         <Box className="products__wrapper">
                         {
                             filteredData.length !== 0?
-                            filteredData.map(({id, title, descr, img, isLiked}, i) => 
+                            filteredData.map(({id, name, description, imageURL}, i) => 
                             (<Box sx = {{margin: {md: '10px', sm: '10px', xs: '10px 0 20px 0', lg: '10px'}}} key = {i}>
-                                <MyCard isLiked = {isLiked} id = {id} title = {title} descr = {descr} img ={img} />
+                                <MyCard id = {id} title = {name} descr = {description} img ={imageURL} />
                             </Box>)) : <Box className = 'products__notfound'>Товары не найдены!</Box>
                         }
                     </Box>

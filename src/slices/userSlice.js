@@ -11,20 +11,15 @@ const applicationSlice = createSlice({
     initialState,
     reducers: {
         userAdd: (state, action) => {
-            state.user = action.payload;
-            state.isAuth = true;
-            state.isError = false;
+            state.user = action.payload.user;
+            state.isAuth = action.payload.isAuth;
+            state.isError = action.payload.isError;
         },
         userExit: (state) => {
-            state.user = null;
+            state.user = 0;
             state.isAuth = false;
             state.isError = false;
         },
-        userError: (state) => {
-            state.user = null;
-            state.isAuth = false;
-            state.isError = true;
-        }
     },
 })
 
@@ -34,6 +29,5 @@ export default reducer;
 
 export const {
     userAdd,
-    userExit,
-    userError
+    userExit
 } = actions;

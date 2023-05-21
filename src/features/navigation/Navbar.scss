@@ -40,7 +40,15 @@
         } 
           
     }
-
+    &__logged {
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        .exit {
+            cursor: pointer;
+        }
+    }
 }
 .wrapper {
     position: sticky;
@@ -49,18 +57,14 @@
     top: -1px;
     padding: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    img {
-        position: absolute;
-        left: 70px
-    }
 }
 
 .login-button {
+    display: block;
+    margin: 0 auto;
     padding: 10px;
-    position: absolute;
-    right: 70px;
     border: none;
     background: #fdc400;
     border-radius: 16px;
@@ -74,5 +78,8 @@
     &:hover {
         transition: 0.3s;
         background: #d3a203;
+    }
+    .fixed {
+        position: static;
     }
 }

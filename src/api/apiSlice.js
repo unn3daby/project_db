@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: 'http://localhost:3001',
+  baseUrl: 'https://25.53.18.59:5000/api',
 });
 
 const apiSlice = createApi({
@@ -9,12 +9,12 @@ const apiSlice = createApi({
   baseQuery,
   endpoints: (builder) => ({
     getCards: builder.query({
-      query: () => '/cards',
-      providesTags: ['Cards']
+      query: () => '/Products',
+      providesTags: ['Products']
     }),
     getOneCard: builder.query({
-      query: (id) => `/cards/${id}`,
-      providesTags: ['Cards']
+      query: (id) => `/Products/${id}`,
+      providesTags: ['Products']
     }),
     updateCard: builder.mutation({
       query: (updatedCard) => ({
@@ -24,28 +24,38 @@ const apiSlice = createApi({
       }),
     }),
     deleteBookmark: builder.mutation({
-      query: (id) => ({
-        url: `/bookmarks/${id}`,
-        method: 'DELETE',
-      }),
+      query: ({userId, id}) =>{
+        return {
+          url: `/Bookmarks/${userId}`,
+          method: 'DELETE',
+          body: {id:id}
+        }},
       invalidatesTags: ['Bookmarks']
     }),
     getUserBookmarks: builder.query({
-        query: (userId) => `/bookmarks?userId=${userId}`,
+        query: (userId ) => {
+          return `/Bookmarks/${userId}`
+        },
         providesTags: ['Bookmarks'],
     }),
     setBookMark: builder.mutation({
-        query: (data) => ({
-          url: '/bookmarks',
-          method: 'POST',
-          body: { ...data },
-        }),
-        invalidatesTags: ['Bookmarks']
+        query: ({userId, id}) => {
+          return ({
+              url: `/Bookmarks/${userId}`,
+              method: 'POST',
+              body: {id:id}
+            });
+      },
+      invalidatesTags: ['Bookmarks']
       }),
-      getShops: builder.query({
-        query: () => '/shops',
-        providesTags: ['Shops']
-      })
+    getShops: builder.query({
+      query: () => '/Shop',
+      providesTags: ['Shops']
+    }),
+    getShopsArr: builder.query({
+      query: () => '/Shop/arr',
+    }), 
+    providesTags: ['Shops']
   }),
 });
 
@@ -56,7 +66,8 @@ export const {
     useSetBookMarkMutation,
     useUpdateCardMutation,
     useDeleteBookmarkMutation,
-    useGetShopsQuery
+    useGetShopsQuery,
+    useGetShopsArrQuery
 } = apiSlice;
 
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import './Tabs.scss';
 import { useGetShopsArrQuery } from '../../api/apiSlice';
 import perek from '../../img/perek2.png';
@@ -12,25 +12,27 @@ import sad from '../../img/sad.png'
 const Tabs = ({tabsData, shops, isLoadingTabs}) => {
     const [state, setState] = useState(1);
     const {data, isLoading} = useGetShopsArrQuery();
-    console.log(shops);
 
     return (
         <>
-            { !isLoadingTabs?
+            { 
+                !isLoadingTabs?
                 <div className='tabs'>
                     <div className="radio-inputs">
-                        <label className="radio">
-                            <input type="radio" name="radio" checked = {state === 1} onChange={() => {setState(1)}}/>
-                            <span className="name"><img src={shops[0].webURL?shops[0].webURL:null} alt={shops[0].name} /></span>
-                        </label>
-                        <label className="radio">
-                            <input type="radio" name="radio" checked = {state === 2} onChange={() => {setState(2)}}/>
-                            <span className="name"><img src={shops[1].webURL?shops[1].webURL:null} alt={shops[0].name} /></span>
-                        </label>    
-                        <label className="radio">
-                            <input type="radio" name="radio" checked = {state === 3} onChange={() => {setState(3)}}/>
-                            <span className="name"><img src={shops[2].webURL?shops[2].webURL:null} alt={shops[0].name} /></span>
-                        </label>
+                        {!isLoading? 
+                            data.map((item, i) => {
+                                return (
+                                    <Fragment key = {i}>
+                                        <label className="radio">
+                                        <input type="radio" name="radio" checked = {state === i+1} onChange={() => {setState(i+1)}}/>
+                                        <span className="name"><img src={shops[i].webURL?shops[i].webURL:null} alt={shops[i].name} /></span>
+                                        </label>
+                                    </Fragment>
+                                );
+                            })
+                            :
+                            <Loader></Loader>
+                        }
                     </div>
                     <div className="tabs__content">
                         {isLoading?

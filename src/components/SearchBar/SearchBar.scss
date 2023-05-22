@@ -6,10 +6,10 @@
     background-color: #fff;
     outline-offset: 3px;
     padding: 10px 1rem;
-    transition: 0.25s;
+    transition: 0.3s;
   }
   
-  .input:focus {
-    outline-offset: 5px;
+  .searchbar:focus {
+    outline-offset: 0px;
     background-color: #fff
   }

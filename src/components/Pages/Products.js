@@ -9,19 +9,22 @@ import SearchBar from '../SearchBar/SearchBar';
 
 const Products = () => {
     const {user} = useSelector(state => state.auth);
-    const {data, isLoading} = useGetCardsQuery();
+    const {data, isLoading, isError} = useGetCardsQuery();
     const [filter, setFilter] = useState('');
     let filteredData = data;
-    if (!isLoading) {
+    if (!isLoading && !isError) {
         filteredData = data.filter(item => item.name.indexOf(filter) >= 0)
     }
-    console.log(data);
+    console.log(isError);
 
     return (
         <main className='products'>
             {
                 isLoading?
                 <Loader className = 'loader'/>
+                :
+                isError?
+                <h1>Ошибка: backend не подключен</h1>
                 :
                 <>
                     <h2 className='products__title'>Найдите нужный вам товар!</h2>

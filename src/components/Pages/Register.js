@@ -59,7 +59,7 @@ const Register = () => {
        <form action="auth" onSubmit={(e) => {e.preventDefault(); validateLogin()}}>
          <Box className='auth'>
             <h2>Регистрация</h2>
-            {error?renderError(error):isError?<h2 style={{color: 'red'}}>Пользовтель по данным именем уже зарегистрирован</h2>:null}
+            {error?renderError(error):isError?<h2 style={{color: 'red'}}>Пользовтель под данным именем уже зарегистрирован</h2>:null}
             <Box mb={5}>
                 <TextField
                     required

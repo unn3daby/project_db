@@ -28,9 +28,7 @@ const Item = () => {
           }
         }
         shopObj = shops.data.filter(item => `${item.id}` === minPriceStoreId);
-        console.log(shopObj[0].webURL, 'asd');
     };
-    console.log(minPriceStoreId);
 
     
     return (

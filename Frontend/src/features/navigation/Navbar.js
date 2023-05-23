@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.scss';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../img/logo.svg'
 import { Avatar, Box } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
@@ -13,7 +13,8 @@ const Navbar = () => {
     const {pathname} = useLocation();
     const [burger, setBurger] = useState(false);
     const dispatch = useDispatch();
-
+    console.log(user)
+    const navigate = useNavigate();
 
     return (
         <Box className='wrapper' sx={{justifyContent: {sm: 'space-between', md: 'space-between', lg: 'space-between', xs: 'space-between'}}}>
@@ -43,7 +44,13 @@ const Navbar = () => {
             {
                 isAuth?
                 <Box className="navbar__logged" sx={{display: {sm: 'none', md: 'flex', lg: 'flex', xs: 'none'}}}>
-                    <Avatar>{user.name[0].toUpperCase()}</Avatar>
+                    <Avatar className='avatar'
+                            onClick = {() => {
+                                if(user.name === ('admin' || 'Admin'))
+                                    window.location.href = 'https://25.53.18.59:5000/swagger/index.html'
+                            }} 
+                            style={{cursor: `${user && user.name === ('Admin' || 'admin')?'pointer': null}`}}>{user.name[0].toUpperCase()}
+                    </Avatar>
                     <LogoutIcon className = 'exit' onClick = {() => {dispatch(userExit())}} />
                 </Box>
                 :

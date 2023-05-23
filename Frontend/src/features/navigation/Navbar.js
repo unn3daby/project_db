@@ -13,8 +13,6 @@ const Navbar = () => {
     const {pathname} = useLocation();
     const [burger, setBurger] = useState(false);
     const dispatch = useDispatch();
-    console.log(user)
-    const navigate = useNavigate();
 
     return (
         <Box className='wrapper' sx={{justifyContent: {sm: 'space-between', md: 'space-between', lg: 'space-between', xs: 'space-between'}}}>
@@ -49,7 +47,7 @@ const Navbar = () => {
                                 if(user.name === ('admin' || 'Admin'))
                                     window.location.href = 'https://25.53.18.59:5000/swagger/index.html'
                             }} 
-                            style={{cursor: `${user && user.name === ('Admin' || 'admin')?'pointer': null}`}}>{user.name[0].toUpperCase()}
+                            style={{cursor: `${user !== 0 && user.name === ('admin')?'pointer': 'null'}`}}>{user.name[0].toUpperCase()}
                     </Avatar>
                     <LogoutIcon className = 'exit' onClick = {() => {dispatch(userExit())}} />
                 </Box>

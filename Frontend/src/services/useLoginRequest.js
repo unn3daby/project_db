@@ -14,7 +14,6 @@ export const useLoginRequest = (username, password) => {
         try {
             const response = await axios.post(`${BASE_URL}/User/login`, {login: username, password: password});
             const userId = response.data;
-            console.log(response.data)
             if(typeof(userId) == 'number') {
                 dispatch(userAdd({user: {name: username, id: userId}, isAuth: true, isError: null}));
                 navigate('/')
